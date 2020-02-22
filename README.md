@@ -1,4 +1,4 @@
-# Introduction
+# Introduction <a href="https://github.com/guinex/FirePong">[source code]</a>
 Authorship prediction and stylometric analysis were originally introduced for text documents and literature. It has gained popularity as stylometric analysis can identify the author and their signature and hence can uniquely associate documents, text or literature with their authors. We focus on a very specific field of computer science for authorship prediction which is identifying the authors of the source code. Source code can be written in any programming language and for our implementation, we need the source code in the same programming language for all the authors. Previous studies have proposed many solutions involving feature extraction using the N-gram approach which turns out to yield the best results. This N-gram dataset is fed to neural network architecture (LSTM or convolutional) to predict the author. For the LSTM-based network, training is slow considering we will require quite a large dataset. Whereas 1-Dimensional convolutional neural networks are used with a kernel size of 2 in many other cases. Despite the satisfactory result of previous studies what they lack is the tokens used for feature selection or the N-gram selection. In most of the cases, special characters are often ignored, space and tab chars are removed and trailing white spaces and new line characters are often truncated. In our implementation, we will consider these tokens. Another aspect of our study is to identify the errors made by authors in a programming language. Studies in this area are mostly on syntactical errors and some on the single token syntax errors.
 
 ## Token Generation
@@ -19,3 +19,5 @@ To address this problem we use the same architecture as above. But we change our
 
 ## Limitations
 After several rounds of testing, it was found that if we increase the number of authors and their data samples our network starts performing poorly. The optimal number of authors would be a value of less than 10. For future updates, we can try building a deeper channel for our network as the variables increase drastically when we increase the number of authors and their source code sample.
+
+
